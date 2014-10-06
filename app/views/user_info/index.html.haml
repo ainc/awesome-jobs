@@ -1,0 +1,37 @@
+- if !user_signed_in?
+  .col-md-12
+    .jumbotron.text-center
+      %h1= t('join_us')
+      %br
+      = link_to "<span class='glyphicon glyphicon-user'></span> #{t('sign_in')}".html_safe, new_user_session_path ,class: 'btn btn-primary btn-lg'
+      %br
+      %br
+      = link_to "<span class='glyphicon glyphicon-plus'></span> #{t('sign_up')}".html_safe, new_user_registration_path, class: 'btn btn-lg btn-success'
+- else
+  .col-md-4
+    .content.text-center
+      %h2= t('welcome')
+      %h3
+        = image_tag current_user.avatar_url(:smaller), class: 'img-circle smaller'
+        = link_to t('your_profile'), show_user_path(username: current_user.username)
+
+  .col-md-8
+    .content
+      %h1.text-center= t('watching_jobs')
+      %br
+      .text-center
+        = will_paginate @jobs, param_name: :page
+        - @jobs.each do |j|
+          %h2
+            = link_to j.title, show_job_path(id: j.id)
+          %p= truncate(j.description, length: 50)
+          = image_tag j.user.avatar_url(:thumb), class: 'img-circle thumb'
+          - if j.user.company and !j.user.company.blank?
+            = link_to "#{t('by')} #{j.user.name} #{t('at')} #{j.user.company}", show_user_path(username: j.user.username)
+          - else
+            = link_to j.user.name, show_user_path(username: j.user.username)
+        %br
+        = will_paginate @jobs, param_name: :page
+        - if @jobs.count == 0
+          %i= t('nothing_here')
+

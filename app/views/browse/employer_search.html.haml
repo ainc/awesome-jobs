@@ -1,0 +1,30 @@
+.col-md-4
+  .content
+    %h2.text-center= t('search')
+    %br
+    = form_tag({action: 'employer_search'}, {method: :get}) do
+      = text_field_tag :q, @q, placeholder: t('search_query_placeholder'), class: 'form-control input-lg', autofocus: true
+      %br
+      .text-center
+        %button{type: 'submit', class: 'btn btn-lg btn-primary'}
+          = '<span class="glyphicon glyphicon-search"></span>'.html_safe
+
+.col-md-8
+  .content
+    %h1.text-center= "#{t('results_for')}: #{@q}"
+    .text-center
+      = will_paginate @users, param_name: :page
+      - @users.each do |u|
+        = image_tag u.avatar_url(:smaller), class: 'img-circle smaller'
+        - if u.company and !u.company.blank?
+          = link_to "#{u.name} (#{u.company})", show_user_path(username: u.username)
+        - else
+          = link_to u.name, show_user_path(username: u.username)
+        %br
+        %br
+      %br
+      = will_paginate @users, param_name: :page
+      - if @users.count == 0
+        %i= t('nothing_here')
+
+

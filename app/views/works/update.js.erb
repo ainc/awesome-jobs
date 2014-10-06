@@ -1,0 +1,44 @@
+// AJAX for when someone tries to create a new work.
+
+<% if @vals[:success] %>
+  window.location.replace("<%= escape_javascript(@vals[:url].to_s) %>");
+<% else %>
+  <% if @vals[:work].errors[:title].count > 0 %>
+    // make sure it wasn't already done
+    if (!($('#work-title-group > span.glyphicon.glyphicon-remove.form-control-feedback').length)) {
+      $('#work-title-group').append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");
+      $('#work-title-group').addClass('has-error');
+      $('#work-title-group').addClass('has-feedback');
+    }
+  <% else %>
+    // remove it if we don't need it
+    $('#work-title-group > span.glyphicon.glyphicon-remove.form-control-feedback').remove();
+    $('#work-title-group').attr('class', 'form-group');
+  <% end %>
+
+  <% if @vals[:work].errors[:url].count > 0 %>
+    // make sure it wasn't already done
+    if (!($('#work-url-group > span.glyphicon.glyphicon-remove.form-control-feedback').length)) {
+      $('#work-url-group').append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");
+      $('#work-url-group').addClass('has-error');
+      $('#work-url-group').addClass('has-feedback');
+    }
+  <% else %>
+    // remove it if we don't need it
+    $('#work-url-group > span.glyphicon.glyphicon-remove.form-control-feedback').remove();
+    $('#work-url-group').attr('class', 'form-group');
+  <% end %>
+
+  <% if @vals[:work].errors[:description].count > 0 %>
+    // make sure it wasn't already done
+    if (!($('#work-description-group > span.glyphicon.glyphicon-remove.form-control-feedback').length)) {
+      $('#work-description-group').append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");
+      $('#work-description-group').addClass('has-error');
+      $('#work-description-group').addClass('has-feedback');
+    }
+  <% else %>
+    // remove it if we don't need it
+    $('#work-description-group > span.glyphicon.glyphicon-remove.form-control-feedback').remove();
+    $('#work-description-group').attr('class', 'form-group');
+  <% end %>
+<% end %>

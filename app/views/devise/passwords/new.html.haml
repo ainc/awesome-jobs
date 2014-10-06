@@ -1,0 +1,19 @@
+.col-md-3
+.col-md-6
+  .content
+    %h2.text-center= t('forgot_your_password')
+    %br
+    = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+      = devise_error_messages!
+      = f.label :email
+      %br
+      = f.email_field :email, autofocus: true, class: 'form-control input-lg', placeholder: t('email_placeholder')
+      %br
+      .text-center
+        %button{type: 'submit', class: 'btn btn-lg btn-success'}= "<span class='glyphicon glyphicon-send'></span> #{t('reset')}".html_safe
+    %br
+    %h2.text-center= t('not_what_you_were_looking_for')
+    %br
+    .text-center
+      = render "devise/shared/links"
+.col-md-3

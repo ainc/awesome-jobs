@@ -1,0 +1,126 @@
+
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  account_details: Account Details
+  address: Address
+  address_label: Address
+  address_placeholder: '123 Awesome Way, Applegate, WI'
+  are_you_sure: Really?
+  at: at
+  by: by
+  change_your_password: Change Your Password
+  company_label: Company
+  company_placeholder: Macrosoft
+  contact_placeholder: Maximum of 4000 characters
+  contact: Contact
+  contact_request: Contact Request
+  current_avatar: Current Avatar
+  current_password_label: Current Password*
+  delete: Delete
+  delete_account_confirmation: Are you absolutely sure that you want to delete your account?
+  description_label: Description
+  description_placeholder: 'I like to eat bagels, cookies, and tuna all at once.'
+  edit: Edit
+  email_label: Email*
+  email_placeholder: john@gmail.com
+  employers: Employers
+  error: Error
+  errors:
+    messages:
+      wrong_size: "is the wrong size (should be %{file_size})"
+      size_too_small: "is too small (should be at least %{file_size})"
+      size_too_big: "is too big (should be at most %{file_size})"
+      carrierwave_processing_error: failed to be processed
+      carrierwave_integrity_error: is not of an allowed file type
+      carrierwave_download_error: could not be downloaded
+      extension_white_list_error: ": you are not allowed to upload %{extension} files, allowed types: %{allowed_types}"
+      extension_black_list_error: ": you are not allowed to upload %{extension} files, prohibited types: %{prohibited_types}"
+      rmagick_processing_error: ": failed to manipulate with rmagick, maybe it is not an image? Original Error: %{e}"
+      mime_types_processing_error: ": failed to process file with MIME::Types, maybe not valid content-type? Original Error: %{e}"
+      mini_magick_processing_error: ": failed to manipulate with MiniMagick, maybe it is not an image? Original Error: %{e}"
+  error_404_message: Looks like you hit a dead end!
+  error_422_message: "Well, that probably wasn't supposed to happen..."
+  error_500_message: "We dun goofed."
+  forgot_password: Forgot Password?
+  forgot_your_password: Forgot Your Password?
+  is_employer_label: Employer?
+  login_label: Username or Email
+  login_placeholder: alek
+  jobs: Openings
+  job_description_placeholder: Here you will work with Android stuff with a maximum of 1000 characters.
+  job_title_placeholder: Android Developer
+  join_us: Awesome Jobs
+  message_cant_be_blank: Message can't be blank!
+  message_sent: Message sent!
+  message_truncated: The rest of the message was truncated.
+  name_label: Name*
+  name_placeholder: Johnny Appleseed
+  new_job: Create Opening
+  new_jobs: New Openings
+  new_work: New Work
+  nothing_here: Nothing Here...
+  not_what_you_were_looking_for: Looking For Something Else?
+  password_confirmation_label: Password Confirmation
+  password_confirmation_label_mandatory: Password Confirmation*
+  password_label: Password
+  password_label_mandatory: Password*
+  password_placeholder: ••••••••
+  password_spaces_error: "can't be comprised of spaces."
+  phone_number: 'Phone #'
+  phone_label: 'Phone #'
+  phone_placeholder: +1 (123) 456-7890 Ext. 3
+  public_info: Public Info
+  processing: Processing...
+  programmers: Programmers
+  recaptcha_error: Captcha is incorrect.
+  resend_confirmation: Resend Confirmation
+  resend_confirmation_instructions: Resend Confirmation Instructions
+  resend_unlock_instructions: Resend Unlock Instructions
+  reset: Reset
+  results_for: Results for
+  resume: Resume
+  save: Save
+  search: Search
+  search_query_placeholder: search placeholder
+  send: Send
+  settings: Account
+  sign_in: Sign In
+  sign_out: Sign Out
+  sign_up: Sign Up
+  title: JobsBoard
+  update_job: Update Opening
+  update_work: Update Work
+  username_label: Username*
+  username_placeholder: alek
+  watching_jobs: Watching
+  website: Website
+  website_label: Website
+  website_placeholder: www.google.com
+  welcome: Welcome!
+  works: Works
+  work_description_placeholder: An awesome project blah 400 characters.
+  work_title_placeholder: Awesome Project
+  work_url_placeholder: www.google.com/somethingbcoo
+  you: You
+  your_profile: Your Profile
+  your_jobs: Your Openings

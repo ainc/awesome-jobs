@@ -1,0 +1,74 @@
+!!!
+%html
+  %head
+    %title= t('title')
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    / Font stuff
+    %link{:href => "http://fonts.googleapis.com/css?family=Raleway", :rel => "stylesheet", :type => "text/css"}
+  %body{'data-no-turbolink' => 'true'}
+
+    %nav.navbar.navbar-inverse{:role => "navigation"}
+      .container
+        / Brand and toggle get grouped for better mobile display
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only= t('toggle_navigation')
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => root_path}= t('title')
+        / Collect the nav links, forms, and other content for toggling
+        - if !user_signed_in?
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li
+                %a{:href => new_user_session_path}= t('sign_in')
+              %li
+                %a{href: new_user_registration_path}= t('sign_up')
+              %li
+                %a{href: show_programmers_path}= t('programmers')
+              %li
+                %a{href: show_employers_path}= t('employers')
+              %li
+                %a{href: show_jobs_path}= t('jobs')
+            %ul.nav.navbar-nav.navbar-right
+              / Nothing here for now.
+        - else
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li
+                %a{:href => show_user_path(username: current_user.username)}= t('you')
+              %li
+                %a{:href => edit_user_registration_path}= t('settings')
+              %li
+                %a{href: show_programmers_path}= t('programmers')
+              %li
+                %a{href: show_employers_path}= t('employers')
+              %li
+                %a{href: show_jobs_path}= t('jobs')
+            %ul.nav.navbar-nav.navbar-right
+              %li
+                = link_to t('sign_out'), destroy_user_session_path, method: :delete
+        / /.navbar-collapse
+      / /.container
+
+    .container
+      .row
+        .col-sm-12
+          - if not @disable_alerts
+            - if flash[:alert]
+              .alert.alert-danger.alert-dismissable
+                %button{type: "button", class: "close", 'data-dismiss' => "alert", 'aria-hidden' => "true"} &times;
+                %strong
+                  = flash[:alert]
+          - if flash[:notice]
+            .alert.alert-info.alert-dismissable
+              %button{type: "button", class: "close", 'data-dismiss' => "alert", 'aria-hidden' => "true"} &times;
+              %strong
+                = flash[:notice]
+
+    .container
+      .row
+        = yield
