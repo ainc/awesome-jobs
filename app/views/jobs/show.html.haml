@@ -10,7 +10,7 @@
       - else
         = link_to @job.user.name, show_user_path(username: @job.user.username)
     %br
-    - if user_signed_in? and !current_user.is_employer
+    - if user_signed_in?
       #watching_button.text-center
         - if @watching
           = link_to('<span class="glyphicon glyphicon-eye-close"></span>'.html_safe, destroy_watching_path(id: @watching.id), class: 'btn btn-lg btn-danger', method: :delete, remote: true)

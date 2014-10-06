@@ -8,7 +8,7 @@ class WatchingsController < ApplicationController
     j = Job.where(id: params[:id]).first
 
     respond_to do |format|
-      if j and !current_user.is_employer and w.save
+      if j and w.save
         display = view_context.link_to('<span class="glyphicon glyphicon-eye-close"></span>'.html_safe, destroy_watching_path(id: w.id), class: 'btn btn-lg btn-danger', method: :delete, remote: true)
         format.html { redirect_to show_job_path(id: params[:id]) }
         format.js { @vals = { success: true, display: display } }
