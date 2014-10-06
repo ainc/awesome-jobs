@@ -93,6 +93,7 @@ en:
   processing: Processing...
   programmers: Programmers
   recaptcha_error: Captcha is incorrect.
+  recaptcha_prompt: Please enter the captcha below.
   resend_confirmation: Resend Confirmation
   resend_confirmation_instructions: Resend Confirmation Instructions
   resend_unlock_instructions: Resend Unlock Instructions

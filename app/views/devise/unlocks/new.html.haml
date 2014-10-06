@@ -7,7 +7,7 @@
       = devise_error_messages!
       = f.label :email
       %br/
-      = f.email_field :email, autofocus: true, class: 'form-control input-lg'
+      = f.email_field :email, autofocus: true, class: 'form-control input-lg', placeholder: t('email_placeholder')
       %br
       .text-center
         %button{type: 'submit', class: 'btn btn-lg btn-success'}= "<span class='glyphicon glyphicon-send'></span> #{t('send')}".html_safe
