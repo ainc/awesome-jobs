@@ -34,6 +34,8 @@ The easiest way to run this application is as follows:
 * Start the Rails server by running *rails s* in the command line.
 * Navigate to *localhost:3000* in a web browser.
 
+One more thing: every single piece of English text in this application that is presented to the user can be found in one of the files in the *config/locales* directory.
+
 Models (*app/models*)
 ------------
 This project contains the following model objects as well as their (important) properties:
