@@ -27,6 +27,7 @@ Because of this along with the reCAPTCHA that I decided to implement, you need t
 Also, this application uses the Postgres database adapter, so in order to run this locally, you have to have Postgres installed on your machine.
 
 The easiest way to run this application is as follows:
+
 * Start Postgres (should be via a native application).
 * Change to the *jobs* directory.
 * Run *bundle* in the command line if you haven't already.
