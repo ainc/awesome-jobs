@@ -118,9 +118,9 @@ en:
   website_placeholder: www.google.com
   welcome: Welcome!
   works: Works
-  work_description_placeholder: An awesome project blah 400 characters.
+  work_description_placeholder: An awesome project blah 400 characters max
   work_title_placeholder: Awesome Project
-  work_url_placeholder: www.google.com/somethingbcoo
+  work_url_placeholder: www.google.com/something
   you: You
   your_profile: Your Profile
   your_jobs: Your Openings
