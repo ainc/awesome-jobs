@@ -15,11 +15,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update
     if params[:user][:password] and params[:user][:password].length > 0 and params[:user][:password].blank?
-      p = account_update_params
-      p.delete(:current_password)
-      build_resource(p)
-      resource.valid?
-      clean_up_passwords(resource)
+      resource.errors.add(:password, t('password_spaces_error'))
       render :edit
     else
       super
