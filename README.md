@@ -24,7 +24,7 @@ Because of this along with the reCAPTCHA that I decided to implement, you need t
 * **GMAIL_USERNAME**
 * **GMAIL_PASSWORD**
 
-Also, this application uses the Postgres database adapter, so in order to run this locally, you have to have Postgres installed on your machine.
+Also, this application uses the Postgres database adapter, so in order to run this locally, you have to have Postgres installed on your machine.  Don't forget to create the databases defined in *config/database.yml*, otherwise none of this is going to work.
 
 The easiest way to run this application is as follows:
 
