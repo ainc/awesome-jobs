@@ -3,6 +3,7 @@ class UserInfoController < ApplicationController
   def index
     if user_signed_in?
       @jobs = current_user.watching_jobs.order(:created_at).paginate(page: params[:page])
+      @possible_jobs = Job.all.order(created_at: :desc).take(5)
     end
   end
 

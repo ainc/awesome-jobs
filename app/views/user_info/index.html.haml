@@ -16,22 +16,42 @@
         = link_to t('your_profile'), show_user_path(username: current_user.username)
 
   .col-md-8
-    .content
-      %h1.text-center= t('watching_jobs')
-      %br
-      .text-center
-        = will_paginate @jobs, param_name: :page
-        - @jobs.each do |j|
-          %h2
-            = link_to j.title, show_job_path(id: j.id)
-          %p= truncate(j.description, length: 50)
-          = image_tag j.user.avatar_url(:thumb), class: 'img-circle thumb'
-          - if j.user.company and !j.user.company.blank?
-            = link_to "#{t('by')} #{j.user.name} #{t('at')} #{j.user.company}", show_user_path(username: j.user.username)
-          - else
-            = link_to j.user.name, show_user_path(username: j.user.username)
+    - if @jobs.count > 0 or @possible_jobs.count == 0
+      .content
+        %h1.text-center= t('watching_jobs')
         %br
-        = will_paginate @jobs, param_name: :page
-        - if @jobs.count == 0
-          %i= t('nothing_here')
+        .text-center
+          = will_paginate @jobs, param_name: :page
+          - @jobs.each do |j|
+            %h2
+              = link_to j.title, show_job_path(id: j.id)
+            %p= truncate(j.description, length: 50)
+            = image_tag j.user.avatar_url(:thumb), class: 'img-circle thumb'
+            - if j.user.company and !j.user.company.blank?
+              = link_to "#{t('by')} #{j.user.name} #{t('at')} #{j.user.company}", show_user_path(username: j.user.username)
+            - else
+              = link_to j.user.name, show_user_path(username: j.user.username)
+          %br
+          = will_paginate @jobs, param_name: :page
+    - if @possible_jobs.count > 0
+      .content
+        %h1.text-center= t('new_jobs')
+        %br
+        .text-center
+          = link_to t('see_all_jobs'), show_jobs_path
+        .text-center
+          - @possible_jobs.each do |j|
+            %h2
+              = link_to j.title, show_job_path(id: j.id)
+            %p= truncate(j.description, length: 50)
+            = image_tag j.user.avatar_url(:thumb), class: 'img-circle thumb'
+            - if j.user.company and !j.user.company.blank?
+              = link_to "#{t('by')} #{j.user.name} #{t('at')} #{j.user.company}", show_user_path(username: j.user.username)
+            - else
+              = link_to j.user.name, show_user_path(username: j.user.username)
+          - if @possible_jobs.count == 0
+            %i= t('nothing_here')
+        %br
+        .text-center
+          = link_to t('see_all_jobs'), show_jobs_path
 
