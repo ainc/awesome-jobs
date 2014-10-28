@@ -33,6 +33,8 @@
         - @jobs.each do |j|
           %h2
             = link_to j.title, show_job_path(id: j.id)
+          - if j.url
+            = auto_link j.url
           %p= truncate(j.description, length: 50)
           - if @user == current_user
             = link_to t('edit'), edit_job_path(id: j.id)
@@ -48,6 +50,10 @@
           #job-title-group.form-group
             = f.label :title, class: 'control-label'
             = f.text_field :title, class: 'form-control input-lg', autocomplete: 'off', placeholder: t('job_title_placeholder'), maxlength: 50
+          %br
+          .form-group
+            = f.label :url, class: 'control-label'
+            = f.text_field :url, class: 'form-control input-lg', autocomplete: 'off', placeholder: t('website_placeholder'), maxlength: 100
           %br
           #job-description-group.form-group
             = f.label :description, class: 'control-label'

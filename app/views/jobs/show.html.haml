@@ -9,6 +9,9 @@
         = link_to "#{t('by')} #{@job.user.name} #{t('at')} #{@job.user.company}", show_user_path(username: @job.user.username)
       - else
         = link_to @job.user.name, show_user_path(username: @job.user.username)
+    - if @job.url and !@job.url.blank?
+      .text-center
+        = auto_link @job.url
     %br
     - if user_signed_in?
       #watching_button.text-center

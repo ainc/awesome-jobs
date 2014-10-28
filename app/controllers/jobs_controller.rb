@@ -22,7 +22,7 @@ class JobsController < ApplicationController
 
   def create
     if params[:job]
-      j = Job.new(title: params[:job][:title], description: params[:job][:description], user: current_user)
+      j = Job.new(title: params[:job][:title], description: params[:job][:description], url: params[:job][:url], user: current_user)
 
       respond_to do |format|
         if current_user.is_employer and j.save
@@ -55,7 +55,7 @@ class JobsController < ApplicationController
     j = Job.where(user: current_user, id: params[:id]).first
 
     respond_to do |format|
-      if params[:job] and j and j.update(title: params[:job][:title], description: params[:job][:description])
+      if params[:job] and j and j.update(title: params[:job][:title], description: params[:job][:description], url: params[:job][:url])
         format.html { redirect_to show_user_path(username: current_user.username) }
         format.js { @vals = { success: true, url: show_user_path(username: current_user.username) } }
       else
