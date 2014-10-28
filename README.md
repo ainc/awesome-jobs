@@ -44,6 +44,7 @@ This project contains the following model objects as well as their (important) p
 * **Job**: A job opening (creatable only by employers).
     * **Description**: A short description of the job opening.  Must be present and is limited to 1000 characters.
     * **Title**: The title of the opening.  Must be present and is limited to 50 characters.
+    * **URL**: The URL of the work.  Is limited to 100 characters.
     * **User**: The user who created the opening.
 * **User**: A site user.
     * **Address**: The address that the user decides to make public. Limited to 40 characters.
