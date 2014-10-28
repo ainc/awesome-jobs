@@ -14,6 +14,9 @@
       %h3
         = image_tag current_user.avatar_url(:smaller), class: 'img-circle smaller'
         = link_to t('your_profile'), show_user_path(username: current_user.username)
+      %button{class: 'btn btn-success navbar-btn btn-lg', 'data-toggle' => "modal", 'data-target' => "#myModal"}
+        = current_user.is_employer ? t('new_job') : t('new_work')
+        %span.glyphicon.glyphicon-plus
 
   .col-md-8
     - if @jobs.count > 0 or @possible_jobs.count == 0
@@ -55,3 +58,44 @@
         .text-center
           = link_to t('see_all_jobs'), show_jobs_path
 
+  #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"data-dismiss" => "modal", type: "button"}
+            %span{"aria-hidden" => "true"} ×
+            %span.sr-only= t('close')
+          %h4#myModalLabel.modal-title.text-center= current_user.is_employer ? t('new_job') : t('new_work')
+        .modal-body
+          - if current_user.is_employer
+            = form_for @job, url: create_job_path, remote: true do |f|
+              #job-title-group.form-group
+                = f.label :title, class: 'control-label'
+                = f.text_field :title, class: 'form-control input-lg', autocomplete: 'off', placeholder: t('job_title_placeholder'), maxlength: 50
+              %br
+              .form-group
+                = f.label :url, class: 'control-label'
+                = f.text_field :url, class: 'form-control input-lg', autocomplete: 'off', placeholder: t('website_placeholder'), maxlength: 100
+              %br
+              #job-description-group.form-group
+                = f.label :description, class: 'control-label'
+                = f.text_area :description, class: 'form-control input-lg', autocomplete: 'off', rows: 7, placeholder: t('job_description_placeholder'), maxlength: 1000
+              %br
+              %div.text-center
+                %button{type: 'submit', class: 'btn btn-success btn-lg'}= "<span class='glyphicon glyphicon-plus'></span> #{t('add')}".html_safe
+          - else
+            = form_for @work, url: create_work_path, remote: true do |f|
+              #work-title-group.form-group
+                = f.label :title, class: 'control-label'
+                = f.text_field :title, class: 'form-control input-lg', autocomplete: 'off', placeholder: t('work_title_placeholder'), maxlength: 50
+              %br
+              #work-url-group.form-group
+                = f.label :url, class: 'control-label'
+                = f.text_field :url, class: 'form-control input-lg', autocomplete: 'off', placeholder: t('work_url_placeholder'), maxlength: 100
+              %br
+              #work-description-group.form-group
+                = f.label :description, class: 'control-label'
+                = f.text_area :description, class: 'form-control input-lg', autocomplete: 'off', rows: 7, placeholder: t('work_description_placeholder'), maxlength: 1000
+              %br
+              %div.text-center
+                %button{type: 'submit', class: 'btn btn-success btn-lg'}= "<span class='glyphicon glyphicon-plus'></span> #{t('add')}".html_safe

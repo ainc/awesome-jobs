@@ -4,6 +4,12 @@ class UserInfoController < ApplicationController
     if user_signed_in?
       @jobs = current_user.watching_jobs.order(:created_at).paginate(page: params[:page])
       @possible_jobs = Job.all.order(created_at: :desc).take(5)
+
+      if current_user.is_employer
+        @job = Job.new
+      else
+        @work = Work.new
+      end
     end
   end
 
