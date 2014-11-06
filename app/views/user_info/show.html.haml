@@ -27,10 +27,11 @@
         = link_to t('contact'), show_user_contact_page_path(username: @user.username), class: 'btn btn-lg btn-primary'
         %br
       %br
-    .text-center
-      %button{class: 'btn btn-success navbar-btn btn-lg', 'data-toggle' => "modal", 'data-target' => "#myModal"}
-        = current_user.is_employer ? t('new_job') : t('new_work')
-        %span.glyphicon.glyphicon-plus
+    - if @user == current_user
+      .text-center
+        %button{class: 'btn btn-success navbar-btn btn-lg', 'data-toggle' => "modal", 'data-target' => "#myModal"}
+          = current_user.is_employer ? t('new_job') : t('new_work')
+          %span.glyphicon.glyphicon-plus
     - if @user.is_employer
       .text-center
         %h2= t('jobs')
