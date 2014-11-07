@@ -26,7 +26,7 @@ class JobsController < ApplicationController
 
       respond_to do |format|
         if current_user.is_employer and j.save
-          format.html { redirect_to show_user_path(username: current_user.username) }
+          format.html { redirect_to show_job_path(id: j.id) }
           format.js { @vals = {success: true, url: show_user_path(username: current_user.username) } }
         else
           format.html { redirect_to show_user_path(username: current_user.username) }
