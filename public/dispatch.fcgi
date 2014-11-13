@@ -1,5 +1,5 @@
-#!/home/adamish/ruby/bin/ruby
-ENV['RAILS_ENV'] = 'development'
+#!/home/subdeveloper/ruby/bin/ruby
+ENV['RAILS_ENV'] = 'production'
 ENV['HOME'] ||= `echo ~`.strip
 ENV['GEM_HOME'] = File.expand_path('~/.gems')
 ENV['GEM_PATH'] = File.expand_path('~/.gems')
