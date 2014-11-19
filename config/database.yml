@@ -83,5 +83,5 @@ test:
 production:
   <<: *default
   database: jobs_production
-  username: card
-  password: <%= ENV['CARD_DATABASE_PASSWORD'] %>
+  username: <%= ENV['JOBS_DATABASE_USERNAME'] %>
+  password: <%= ENV['JOBS_DATABASE_PASSWORD'] %>
