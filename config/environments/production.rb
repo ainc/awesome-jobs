@@ -4,11 +4,11 @@ Rails.application.configure do
   # Just so Devise doesn't get angry.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
+    address:              'mail.awesomeinc.org',
     port:                 587,
-    domain:               'something.com',
-    user_name:            ENV['GMAIL_USERNAME'],
-    password:             ENV['GMAIL_PASSWORD'],
+    domain:               'awesomeinc.org',
+    user_name:            ENV['EMAIL_USERNAME'],
+    password:             ENV['EMAIL_PASSWORD'],
     authentication:       'plain',
     enable_starttls_auto: true
   }
