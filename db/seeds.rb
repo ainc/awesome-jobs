@@ -8,7 +8,7 @@
 
 
 # Based on the Trello comments
-hagan = User.new(username: 'hagan', password: 'password', email: 'weston@durhamlabs.com', name: 'Weston Hagan', company: 'Durham Labs', is_employer: true)
+hagan = User.new(username: 'hagan', password: ENV['PASSWORD_1'], email: 'weston@durhamlabs.com', name: 'Weston Hagan', company: 'Durham Labs', is_employer: true)
 hagan.skip_confirmation!
 hagan.save!
 
@@ -16,7 +16,7 @@ hagan_job = Job.new(user: hagan, title: 'Engineer', description: 'Doing some eng
 hagan_job.save!
 
 
-completeset = User.new(username: 'garydarna', password: 'PassworD', email: 'gary@completeset.com', name: 'Gary Darna', company: 'CompleteSet', is_employer: true)
+completeset = User.new(username: 'garydarna', password: ENV['PASSWORD_2'], email: 'gary@completeset.com', name: 'Gary Darna', company: 'CompleteSet', is_employer: true)
 completeset.skip_confirmation!
 completeset.save!
 
@@ -45,7 +45,7 @@ Full-time salary negotiable based on experience, benefits, and equity compensati
 completeset_job.save!
 
 
-earthineer = User.new(username: 'danadams', password: 'PasSwoRd', email: 'dan@earthineer.com', name: 'Dan Adams', company: 'Earthineer', is_employer: true)
+earthineer = User.new(username: 'danadams', password: ENV['PASSWORD_3'], email: 'dan@earthineer.com', name: 'Dan Adams', company: 'Earthineer', is_employer: true)
 earthineer.skip_confirmation!
 earthineer.save!
 
@@ -53,7 +53,7 @@ earthineer_job = Job.new(user: earthineer, title: 'PHP Developer', description: 
 earthineer_job.save!
 
 
-leancor = User.new(username: 'bengreen', password: 'PasSWorD', email: 'bgreen@leancor.com', name: 'Ben Green', company: 'Leancor', is_employer: true)
+leancor = User.new(username: 'bengreen', password: ENV['PASSWORD_4'], email: 'bgreen@leancor.com', name: 'Ben Green', company: 'Leancor', is_employer: true)
 leancor.skip_confirmation!
 leancor.save!
 
@@ -61,17 +61,17 @@ leancor_job = Job.new(user: leancor, title: 'Web Developer', description: "PHP 5
 leancor_job.save!
 
 
-rector = User.new(username: 'davidrector', password: 'PasSWOrD', email: 'davidarector@gmail.com', name: 'David Rector', is_employer: false)
+rector = User.new(username: 'davidrector', password: ENV['PASSWORD_5'], email: 'davidarector@gmail.com', name: 'David Rector', is_employer: false)
 rector.skip_confirmation!
 rector.save!
 
 
-lagrone = User.new(username: 'jameslagrone', password: 'pASsWord', email: 'jlagrone86@gmail.com', name: 'James LaGrone', is_employer: false)
+lagrone = User.new(username: 'jameslagrone', password: ENV['PASSWORD_6'], email: 'jlagrone86@gmail.com', name: 'James LaGrone', is_employer: false)
 lagrone.skip_confirmation!
 lagrone.save!
 
 
-jacoby = User.new(username: 'benjacoby', password: 'PASSWORD', email: 'ben.jacoby@reverlylabs.com', name: 'Ben Jacoby', is_employer: true)
+jacoby = User.new(username: 'benjacoby', password: ENV['PASSWORD_7'], email: 'ben.jacoby@reverlylabs.com', name: 'Ben Jacoby', is_employer: true)
 jacoby.skip_confirmation!
 jacoby.save!
 
@@ -79,7 +79,7 @@ jacoby_job = Job.new(user: jacoby, title: 'Web Software Engineer (Full-Stack)', 
 jacoby_job.save!
 
 
-pridemore = User.new(username: 'jamiepridemore', password: 'PASSword', email: 'jamiepridemore@pokemon.com', name: 'Jamie Pridemore', is_employer: true)
+pridemore = User.new(username: 'jamiepridemore', password: ENV['PASSWORD_8'], email: 'jamiepridemore@pokemon.com', name: 'Jamie Pridemore', is_employer: true)
 pridemore.skip_confirmation!
 pridemore.save!
 
@@ -87,7 +87,7 @@ pridemore_job = Job.new(user: pridemore, title: 'PHP Developer', description: 'M
 pridemore_job.save!
 
 
-howard = User.new(username: 'shanehoward', password: 'PAssWOrd', email: 'shanehoward@somethingawesomeyo.org', name: 'Shane Howard', is_employer: true)
+howard = User.new(username: 'shanehoward', password: ENV['PASSWORD_9'], email: 'shanehoward@somethingawesomeyo.org', name: 'Shane Howard', is_employer: true)
 howard.skip_confirmation!
 howard.save!
 
