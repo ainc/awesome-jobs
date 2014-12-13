@@ -3,8 +3,7 @@
   .content
     %h1.text-center= @job.title
     .text-center
-      - if !@job.user.avatar.blank?
-        = image_tag @job.user.avatar_url(:thumb), class: 'img-circle'
+      = image_tag @job.user.avatar_url(:thumb), class: 'img-circle'
       - if @job.user.company and !@job.user.company.blank?
         = link_to "#{t('by')} #{@job.user.name} #{t('at')} #{@job.user.company}", show_user_path(username: @job.user.username)
       - else
