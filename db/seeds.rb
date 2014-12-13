@@ -22,26 +22,7 @@ completeset.save!
 
 completeset_job = Job.new(user: completeset, title: 'Software Engineer, iOS at CompleteSet', description: "RESPONSIBILITIES\n
 - Collaborate around the creation of new and existing features\n
-- Implement beautiful user interfaces\n
-\n
-REQUIREMENTS\n
-- Expert knowledge of Objective-C and iOS frameworks\n
-- Experience developing, releasing, and supporting iOS applications\n
-- Ability to get things done quickly on a small team\n
-\n
-BONUS\n
-- Knowledge of Swift and other emerging technologies \n
-- Experience using Git for source control \n
-- Interest in collectibles or antiques \n
-- Previous startup experience as a founder or employee\n
-\n
-PERKS \n
-- Building a product based on your favorite brands, movies, and characters \n
-- Ground floor opportunity with a fast-growing startup \n
-- Smart, motivated co-workers in a fun office environment\n
-\n
-COMPENSATION \n
-Full-time salary negotiable based on experience, benefits, and equity compensation plan. We’re building the treasure map for collectors and need a killer team to make it happen.", url: 'https://angel.co/completeset/jobs/45470-ios-engineer')
+- Implement beautiful user interfaces\n")
 completeset_job.save!
 
 
