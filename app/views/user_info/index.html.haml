@@ -3,6 +3,11 @@
     .jumbotron.text-center
       %h1= t('join_us')
       %br
+      %p
+        The Awesome Inc Jobs Board is a place to find out about tech job openings in Lexington, Louisville, Cincinnati/NKY, and throughout Kentucky. Employers can use this site to add and manage job listings, and and people seeking jobs can post info like experience and GitHub/LinkedIn profiles. Feel free to email
+        %a{href:'mailto:jobs.awesomeinc.org'} jobs@awesomeinc.org
+        for any assistance.
+      %br
       = link_to "<span class='glyphicon glyphicon-user'></span> #{t('sign_in')}".html_safe, new_user_session_path ,class: 'btn btn-primary btn-lg'
       %br
       %br

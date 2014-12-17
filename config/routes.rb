@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
   
-  devise_for :users, controllers: {registrations: 'registrations', sessions: 'sessions', confirmations: 'confirmations'}, path: ''
+  devise_for :users, controllers: {registrations: 'registrations', sessions: 'sessions', confirmations: 'confirmations'}, path: '', :skip => [:confirmations, :passwords]
+
+  devise_scope :user do
+    get '/new_conf' => 'confirmations#new', :as => :new_user_confirmation
+    post '/conf' => 'confirmations#create', :as => :user_confirmation
+    get '/conf' => 'confirmations#show', :as => :show_user_confirmation
+
+    get '/new_pass' => 'devise/passwords#new', :as => :new_user_password
+    post '/pass' => 'devise/passwords#create', :as => :user_password
+    get '/pass' => 'devise/passwords#edit', :as => :edit_user_password
+    put '/pass' => 'devise/passwords#update', :as => :update_user_password
+  end
 
   controller :application do
     get '404' => :error_404
