@@ -3,14 +3,14 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations', sessions: 'sessions', confirmations: 'confirmations'}, path: '', :skip => [:confirmations, :passwords]
 
   devise_scope :user do
-    get '/new_conf' => 'confirmations#new', :as => :new_user_confirmation
-    post '/conf' => 'confirmations#create', :as => :user_confirmation
-    get '/conf' => 'confirmations#show', :as => :show_user_confirmation
+    get '/new_confirmation' => 'confirmations#new', :as => :new_user_confirmation
+    post '/confirmation' => 'confirmations#create', :as => :user_confirmation
+    get '/confirmation' => 'confirmations#show', :as => :show_user_confirmation
 
-    get '/new_pass' => 'devise/passwords#new', :as => :new_user_password
-    post '/pass' => 'devise/passwords#create', :as => :user_password
-    get '/pass' => 'devise/passwords#edit', :as => :edit_user_password
-    put '/pass' => 'devise/passwords#update', :as => :update_user_password
+    get '/new_password' => 'devise/passwords#new', :as => :new_user_password
+    post '/password' => 'devise/passwords#create', :as => :user_password
+    get '/password' => 'devise/passwords#edit', :as => :edit_user_password
+    put '/password' => 'devise/passwords#update', :as => :update_user_password
   end
 
   controller :application do
@@ -20,42 +20,42 @@ Rails.application.routes.draw do
   end
 
   controller :browse do
-    get '/p' => :programmers, as: 'show_programmers'
-    get '/e' => :employers, as: 'show_employers'
-    get '/j' => :jobs, as: 'show_jobs'
+    get '/programmers' => :programmers, as: 'show_programmers'
+    get '/employers' => :employers, as: 'show_employers'
+    get '/jobs' => :jobs, as: 'show_jobs'
 
-    get '/ps' => :programmer_search, as: 'search_programmers'
-    get '/es' => :employer_search, as: 'search_employers'
-    get '/js' => :job_search, as: 'search_jobs'
+    get '/programmer_search' => :programmer_search, as: 'search_programmers'
+    get '/employer_search' => :employer_search, as: 'search_employers'
+    get '/job_search' => :job_search, as: 'search_jobs'
   end
 
   controller :contact do
-    get '/u/:username/c' => :contact_page, as: 'show_user_contact_page'
-    post '/c' => :send_contact_request, as: 'send_contact_request'
+    get '/user/:username/c' => :contact_page, as: 'show_user_contact_page'
+    post '/contact' => :send_contact_request, as: 'send_contact_request'
   end
 
   controller :jobs do
-    post '/j/create' => :create, as: 'create_job'
-    delete '/j/destroy' => :destroy, as: 'destroy_job'
-    get '/j/:id' => :show, as: 'show_job'
-    get '/j/:id/edit' => :edit, as: 'edit_job'
-    patch '/j/:id/update' => :update, as: 'update_job'
+    post '/job/create' => :create, as: 'create_job'
+    delete '/job/destroy' => :destroy, as: 'destroy_job'
+    get '/job/:id' => :show, as: 'show_job'
+    get '/job/:id/edit' => :edit, as: 'edit_job'
+    patch '/job/:id/update' => :update, as: 'update_job'
   end
 
   controller :user_info do
-    get '/u/:username' => :show, as: 'show_user'
+    get '/user/:username' => :show, as: 'show_user'
   end
 
   controller :watchings do
-    post '/wa/create' => :create, as: 'create_watching'
-    delete '/wa/destroy' => :destroy, as: 'destroy_watching'
+    post '/watching/create' => :create, as: 'create_watching'
+    delete '/watching/destroy' => :destroy, as: 'destroy_watching'
   end
 
   controller :works do
-    post '/w/create' => :create, as: 'create_work'
-    delete '/w/:id/destroy' => :destroy, as: 'destroy_work'
-    get '/w/:id/edit' => :edit, as: 'edit_work'
-    patch '/w/:id/update' => :update, as: 'update_work'
+    post '/work/create' => :create, as: 'create_work'
+    delete '/work/:id/destroy' => :destroy, as: 'destroy_work'
+    get '/work/:id/edit' => :edit, as: 'edit_work'
+    patch '/work/:id/update' => :update, as: 'update_work'
   end
 
   root 'user_info#index'
