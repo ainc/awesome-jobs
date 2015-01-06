@@ -32,8 +32,6 @@
                 %a{href: show_programmers_path}= t('programmers')
               %li
                 %a{href: show_employers_path}= t('employers')
-              %li
-                %a{href: show_jobs_path}= t('jobs')
         - else
           #bs-example-navbar-collapse-1.collapse.navbar-collapse
             %ul.nav.navbar-nav.navbar-right
@@ -45,8 +43,6 @@
                 %a{href: show_programmers_path}= t('programmers')
               %li
                 %a{href: show_employers_path}= t('employers')
-              %li
-                %a{href: show_jobs_path}= t('jobs')
               %li
                 = link_to t('sign_out'), destroy_user_session_path, method: :delete
         / /.navbar-collapse

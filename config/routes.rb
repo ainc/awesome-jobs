@@ -22,7 +22,6 @@ Rails.application.routes.draw do
   controller :browse do
     get '/programmers' => :programmers, as: 'show_programmers'
     get '/employers' => :employers, as: 'show_employers'
-    get '/jobs' => :jobs, as: 'show_jobs'
 
     get '/programmer_search' => :programmer_search, as: 'search_programmers'
     get '/employer_search' => :employer_search, as: 'search_employers'
@@ -58,7 +57,7 @@ Rails.application.routes.draw do
     patch '/work/:id/update' => :update, as: 'update_work'
   end
 
-  root 'user_info#index'
+  root 'browse#jobs'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

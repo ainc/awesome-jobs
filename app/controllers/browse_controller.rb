@@ -32,6 +32,11 @@ class BrowseController < ApplicationController
 
   def jobs
     @jobs = Job.all.order(created_at: :desc).paginate(page: params[:page])
+
+    if user_signed_in?
+
+      @watching_jobs = current_user.watching_jobs.order(:created_at).paginate(page: params[:watching_page])
+    end
   end
 
   def job_search

@@ -1,4 +1,13 @@
 .col-md-4
+  - if current_user
+    .content.text-center
+      %h2= t('welcome')
+      %h3
+        = image_tag current_user.avatar_url(:smaller), class: 'img-circle smaller'
+        = link_to t('your_profile'), show_user_path(username: current_user.username)
+      %button{class: 'btn btn-success navbar-btn btn-lg', 'data-toggle' => "modal", 'data-target' => "#myModal"}
+        = current_user.is_employer ? t('new_job') : t('new_work')
+        %span.glyphicon.glyphicon-plus
   .content.text-center
     %h2.text-center= t('search')
     %br
