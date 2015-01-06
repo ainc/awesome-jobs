@@ -44,3 +44,5 @@
       = will_paginate @users, param_name: :page
       - if @users.count == 0
         %i= t('nothing_here')
+
+= render file: 'browse/_modal.html.haml'
