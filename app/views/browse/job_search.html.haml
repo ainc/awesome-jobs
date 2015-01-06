@@ -8,6 +8,14 @@
       %button{class: 'btn btn-success navbar-btn btn-lg', 'data-toggle' => "modal", 'data-target' => "#myModal"}
         = current_user.is_employer ? t('new_job') : t('new_work')
         %span.glyphicon.glyphicon-plus
+  - else
+    .content.text-center
+      %h2= t('welcome')
+      %br
+      = link_to "<span class='glyphicon glyphicon-user'></span> #{t('sign_in')}".html_safe, new_user_session_path ,class: 'btn btn-primary btn-lg'
+      %br
+      %br
+      = link_to "<span class='glyphicon glyphicon-plus'></span> #{t('sign_up')}".html_safe, new_user_registration_path, class: 'btn btn-lg btn-success'
   .content.text-center
     %h2.text-center= t('search')
     %br
