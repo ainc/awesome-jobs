@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Awesome Jobs</title>
+<link data-turbolinks-track="true" href="assets/application-18dd4a2b3a56f63525c1faae9883ae65.css" media="all" rel="stylesheet" />
+<script data-turbolinks-track="true" src="assets/application-30097dfc20e73cb3d1a89a5841d4dfdd.js"></script>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="yGXzoJJCfTA60Z7hYixieCDRy7Cft1CKPJsRcEAfifw=" name="csrf-token" />
+<!-- Font stuff -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans%7CExo' rel='stylesheet' type='text/css'>
+</head>
+<body data-no-turbolink='true'>
+<nav class='navbar navbar-inverse navbar-fixed-top' role='navigation'>
+<div class='container'>
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class='navbar-header'>
+<button class='navbar-toggle collapsed' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
+<span class='sr-only'><span class="translation_missing" title="translation missing: en.toggle_navigation">Toggle Navigation</span></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+<a href='index.html'>
+<img alt="Logo" class="logo" src="assets/logo-b04dac5bb881624f5edec180a360847c.png" />
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+<ul class='nav navbar-nav navbar-right'>
+<li>
+<a href='sign_in.html'>Sign In</a>
+</li>
+<li>
+<a href='sign_up.html'>Sign Up</a>
+</li>
+<li>
+<a href='programmers.html'>Programmers</a>
+</li>
+<li>
+<a href='employers.html'>Employers</a>
+</li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
+</nav>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-12'>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='row'>
+<div class='col-md-3'></div>
+<div class='col-md-6'>
+<div class='content'>
+<h2 class='text-center'>Sign Up</h2>
+<form accept-charset="UTF-8" action="/" class="new_user" id="new_user" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="yGXzoJJCfTA60Z7hYixieCDRy7Cft1CKPJsRcEAfifw=" /></div><br>
+
+<h3 class='text-center'>Account Details</h3>
+<div class='form-group'><label class="control-label" for="user_email">Email*</label><input autofocus="autofocus" class="form-control input-lg" id="user_email" name="user[email]" placeholder="john@gmail.com" type="email" value="" /></div>
+<div class='form-group'><label class="control-label" for="user_password">Password</label><input autocomplete="false" class="form-control input-lg" id="user_password" name="user[password]" placeholder="••••••••" type="password" /></div>
+<div class='form-group'><label class="control-label" for="user_password_confirmation">Password Confirmation</label><input autocomplete="false" class="form-control input-lg" id="user_password_confirmation" name="user[password_confirmation]" placeholder="••••••••" type="password" /></div>
+<div class='form-group'><label class="control-label" for="user_username">Username*</label><input class="form-control input-lg" id="user_username" maxlength="15" name="user[username]" placeholder="alek" size="15" type="text" /></div>
+<br>
+<h3 class='text-center'>Public Info</h3>
+<div class='form-group'><label class="control-label" for="user_name">Name*</label><input class="form-control input-lg" id="user_name" maxlength="40" name="user[name]" placeholder="Johnny Appleseed" size="40" type="text" /></div>
+<div class='form-group'><label class="control-label" for="user_company">Company</label><input class="form-control input-lg" id="user_company" maxlength="40" name="user[company]" placeholder="Macrosoft" size="40" type="text" /></div>
+<div class='form-group'><label class="control-label" for="user_website">Website</label><input class="form-control input-lg" id="user_website" maxlength="92" name="user[website]" placeholder="www.google.com" size="92" type="text" /></div>
+<div class='form-group'><label class="control-label" for="user_address">Address</label><input class="form-control input-lg" id="user_address" maxlength="40" name="user[address]" placeholder="123 Awesome Way, Applegate, WI" size="40" type="text" /></div>
+<div class='form-group'><label class="control-label" for="user_phone">Phone #</label><input class="form-control input-lg" id="user_phone" maxlength="20" name="user[phone]" placeholder="+1 (123) 456-7890 Ext. 3" size="20" type="text" /></div>
+<div class='text-center'>
+<div class='form-group'><input name="user[is_employer]" type="hidden" value="0" /><input id="user_is_employer" name="user[is_employer]" type="checkbox" value="1" />  <label class="control-label" for="user_is_employer">Employer?</label></div>
+</div>
+<div class='captcha-center'>
+<script type="text/javascript">
+  var RecaptchaOptions = {"ssl": true, "theme": "clean", "tabindex": 1, "public_key": "6LdCtP4SAAAAAN32ri-8NiWdiNfxKWeURvPWKckg"};
+</script>
+          <div id="dynamic_recaptcha"></div>
+          <script type="text/javascript">
+            var rc_script_tag = document.createElement('script'),
+                rc_init_func = function(){Recaptcha.create("6LdCtP4SAAAAAN32ri-8NiWdiNfxKWeURvPWKckg", document.getElementById("dynamic_recaptcha"),RecaptchaOptions);}
+            rc_script_tag.src = "//www.google.com/recaptcha/api/js/recaptcha_ajax.js";
+            rc_script_tag.type = 'text/javascript';
+            rc_script_tag.onload = function(){rc_init_func.call();};
+            rc_script_tag.onreadystatechange = function(){
+              if (rc_script_tag.readyState == 'loaded' || rc_script_tag.readyState == 'complete') {rc_init_func.call();}
+            };
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(rc_script_tag);
+          </script>
+
+</div>
+<br>
+<div class='text-center'>
+<button class='btn btn-success btn-lg' type='submit'><span class='glyphicon glyphicon-plus'></span> Sign Up</button>
+</div>
+</form>
+
+<br>
+<h2 class='text-center'>Looking For Something Else?</h2>
+<br>
+<div class='text-center'><a class="btn btn-primary btn-lg" href="sign_in.html"><span class='glyphicon glyphicon-user'></span> Sign In</a></div>
+</div>
+</div>
+<div class='col-md-3'></div>
+
+</div>
+</div>
+</body>
+</html>
