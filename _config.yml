@@ -1,2 +1,13 @@
 name: Awesome Inc Jobs Board
 permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  employers:
+    permalink: /employers/:path/
+    output: true
+  candidates:
+    permalink: /candidates/:path/
+    output: true
+  jobs:
+    permalink: /jobs/:path/
+    output: true
