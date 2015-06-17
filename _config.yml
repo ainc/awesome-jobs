@@ -1,5 +1,5 @@
 name: Awesome Inc Jobs Board
-permalink: /blog/:year/:month/:day/:title/
+permalink: pretty
 
 collections:
   employers:
