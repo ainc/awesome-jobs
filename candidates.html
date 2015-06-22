@@ -1,44 +1,19 @@
 ---
 layout: page
-permalink: /candidates/
 ---
 
 {% include sidebar.html %}
-<div class='col-md-8'>
-	<div class='content'>
-	<h1 class='text-center'>Candidates</h1>
+<div class="col-md-8">
+	<div class="content">
+	<h1 class="text-center">Candidates</h1>
 		<br>
-		<div class='text-center'>
+		<div class="text-center">
 
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/alekzieba.html">Alek Zieba (Awesome Inc)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/davidrector.html">David Rector</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/Garrett.html">Garrett Ebel</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/irowe.html">Isaac Rowe (Awesome Inc)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/jameslagrone.html">James LaGrone</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/keith.html">Keith Kurzendoerfer (Apax Software)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/raney24.html">Kyle Raney (Awesome Inc)</a>
-			<br>
-			<br>
-			<br>
+		{% for candidate in site.candidates %}
+          <h2><a href="{{ candidate.url }}">{{ candidate.title }}</a></h2>
+          <p>{{ candidate.content | strip_html | truncatewords: 7, '...' }}</p>
+          <hr>
+        {% endfor %}
 
 		</div>
 	</div>

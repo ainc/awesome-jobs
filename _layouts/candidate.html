@@ -4,13 +4,19 @@ layout: page
 
 <div class="col-md-8 col-md-offset-2">
 	<div class="content">
-	<h1 class="text-center">{{ page.title }} - {{ page.company }}</h1>
+	<h1 class="text-center">{{ page.title }}</h1>
 		<br>
 		<div>
+		{% if page.email_hash %}<img src="http://www.gravatar.com/avatar/{{ page.email_hash }}" width="80" alt="{{ page.title }}">{% endif %}
+		<p>{{ page.content }}</p>
           <ul>
-          <li><a href="http://linkedin.com/{{ page.linkedin }}">LinkedIn</a></li>
-          {{ page.content }}
-          <a href="{{ page.link }}">More Info...</a>
+	          {% if page.linkedin %}<li><a href="https://linkedin.com/{{ page.linkedin }}" target="_blank">LinkedIn</a></li>{% endif %}
+	          {% if page.github %}<li><a href="https://github.com/{{ page.github }}" target="_blank">GitHub</a></li>{% endif %}
+	          {% if page.stackoverflow %}<li><a href="https://stackoverflow.com/users/{{ page.stackoverflow }}" target="_blank">Stack Overflow</a></li>{% endif %}
+	          {% if page.portfolio %}<li><a href="{{ page.portfolio }}" target="_blank">Portfolio</a></li>{% endif %}
+	          {% if page.dribbble %}<li><a href="https://dribbble.com/{{ page.dribbble }}" target="_blank">Dribbble</a></li>{% endif %}
+          </ul>
+          
           <hr>
 
 		</div>
