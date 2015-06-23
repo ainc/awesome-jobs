@@ -11,6 +11,7 @@ layout: page
 		<p>{{ page.content }}</p>
           <ul>
 	          {% if page.linkedin %}<li><a href="https://linkedin.com/{{ page.linkedin }}" target="_blank">LinkedIn</a></li>{% endif %}
+	          {% if page.resume %}<li><a href="{{ page.resume }}" target="_blank">Resume</a></li>{% endif %}
 	          {% if page.github %}<li><a href="https://github.com/{{ page.github }}" target="_blank">GitHub</a></li>{% endif %}
 	          {% if page.stackoverflow %}<li><a href="https://stackoverflow.com/users/{{ page.stackoverflow }}" target="_blank">Stack Overflow</a></li>{% endif %}
 	          {% if page.portfolio %}<li><a href="{{ page.portfolio }}" target="_blank">Portfolio</a></li>{% endif %}
