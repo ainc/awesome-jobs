@@ -5,85 +5,25 @@ layout: page
 {% include sidebar.html %}
 <div class="col-md-8">
 	<div class="content">
-		<h1 class="text-center">New Openings</h1>
+		<h1 class="text-center">About</h1>
+		<br>
+		<p>The Awesome Inc Jobs Board is a resource to connect Kentucky companies with tech employees. It's free to post a Job Opening or Resume.</p>
+		<p>If you're looking to gain software development skills, you might enjoy the Awesome Inc U Web Developer Bootcamp, launching in January 2016.</p>
+	</div>
+</div>
+<div class="col-md-8">
+	<div class="content">
+	<h1 class="text-center">New Openings</h1>
 		<br>
 		<div class="text-center">
 
-			<h2>
-				<a href="job/12.html">Technical Support Staff Assistant</a>
-			</h2>
-			<p>The UK Dept. of Communication’s Office of Resea...</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/sjohnson519.html">by Scott Johnson at University of Kentucky</a>
-			<h2>
-				<a href="job/11.html">PHP Intern</a>
-			</h2>
-			<p>We are looking for someone that wants to gain s...</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/srazor.html">by Sam Razor at Hippo Manager Software, Inc.</a>
-			<h2>
-				<a href="job/10.html">Web / Mobile App Developer</a>
-			</h2>
-			<p>We&#39;re looking for developers interested in buil...</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/kkurzendoerfer.html">by Keith Kurzendoerfer at Apax Software</a>
-			<h2>
-				<a href="job/9.html">Lead Instructor</a>
-			</h2>
-			<p>An ideal candidate for the lead instructor role...</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/nicksuch.html">by Nick Such at Awesome Inc</a>
-			<h2>
-				<a href="job/8.html">Web Designer</a>
-			</h2>
-			<p>Net Tango is looking for a talented web designe...</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/sminier.html">by Stephanie Minier at Net Tango</a>
-			<h2>
-				<a href="job/7.html">Web Developer</a>
-			</h2>
-			<p>.NET/ColdFusion</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/shanehoward.html">Shane Howard</a>
-			<h2>
-				<a href="job/6.html">PHP Developer</a>
-			</h2>
-			<p>Must be able to write clean, well-documented co...</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/jamiepridemore.html">Jamie Pridemore</a>
-			<h2>
-				<a href="job/5.html">Web Software Engineer (Full-Stack)</a>
-			</h2>
-			<p>We are currently seeking an engineer for full-s...</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/benjacoby.html">Ben Jacoby</a>
-			<h2>
-				<a href="job/4.html">Web Developer</a>
-			</h2>
-			<p>PHP 5.0 or later, Cake PHP/MVC framework, HTML/...</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/bengreen.html">by Ben Green at Leancor</a>
-			<h2>
-				<a href="job/3.html">PHP Developer</a>
-			</h2>
-			<p>PHP developer to work with on an equity basis. ...</p>
-			<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-			<a href="user/danadams.html">by Dan Adams at Earthineer</a>
-			<h2>
-				<a href="job/2.html">Software Engineer, iOS at CompleteSet</a>
-			</h2>
-			<p>RESPONSIBILITIES
+		{% for job in site.jobs %}
+          <h2><a href="{{ job.url }}">{{ job.title }} - {{ job.company }}</a></h2>
+          {{ job.short_description }}
+          {{ job.content }}
+          <hr>
+        {% endfor %}
 
-				- Collaborate around the crea...</p>
-				<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-				<a href="user/garydarna.html">by Gary Darna at CompleteSet</a>
-				<h2>
-					<a href="job/1.html">Engineer</a>
-				</h2>
-				<p>Doing some engineering.</p>
-				<img alt="Default avatar" class="img-circle thumb" src="default_avatar.jpg" />
-				<a href="user/hagan.html">by Weston Hagan at Durham Labs</a>
-				<br>
 		</div>
 	</div>
 </div>
