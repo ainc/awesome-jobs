@@ -13,6 +13,7 @@ The UK Dept. of Communication’s Office of Research & Instructional Technology 
 Exp. in some of these areas is preferred: Desktop hard/soft support, Database, Basic programming, Web CMS, Audio/Video Production, Graphic Design, Learning Management Systems
 
 RESPONSIBILITIES
+
 - Support instructors & classroom tech
 - Provide support to the Director
 - Develop electronic newsletters
@@ -30,6 +31,6 @@ Starting wage is $15/hr
 
 Apply by May 1st at:
 
-https://ukjobs.uky.edu/postings/61903
+[https://ukjobs.uky.edu/postings/61903](https://ukjobs.uky.edu/postings/61903)
 
 After a trial period, this temp position will transition to regular full-time
