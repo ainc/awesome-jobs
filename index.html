@@ -19,7 +19,7 @@ layout: page
 
 		{% for job in site.jobs limit:3 %}
           <h2><a href="{{ job.url }}">{{ job.title }} - {{ job.company }}</a></h2>
-          {{ job.short_description }}
+          {{ job.description }}
           <hr>
         {% endfor %}
 

@@ -1,0 +1,23 @@
+---
+layout: page
+---
+
+<div class="col-md-8 col-md-offset-2">
+	<div class="content">
+	<h1 class="text-center">{{ page.title }}</h1>
+		<br>
+		<div>
+          <p>Description: {{ page.description }}</p>
+          {{ page.content }}
+          <p>Company Website: <a href="{{ page.website }}" target="_blank">{{ page.title }}</a></p>
+          <hr>
+          <h2>Jobs</h2>
+          {% for job in site.jobs %}
+          {% if job.company == page.title %}
+          <h3><a href="{{ job.url }}">{{ job.title }} - {{ job.company }}</a></h3>
+          {{ job.description }}
+          {% endif %}
+          {% endfor %}
+		</div>
+	</div>
+</div>

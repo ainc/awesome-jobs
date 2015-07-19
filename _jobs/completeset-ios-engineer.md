@@ -5,7 +5,7 @@ company: CompleteSet
 posted_by: garydarna
 contact: Gary Darna
 link: http://completeset.com/
-short_description: Software Engineer, iOS
+description: Software Engineer, iOS
 ---
 
 RESPONSIBILITIES

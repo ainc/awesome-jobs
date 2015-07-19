@@ -5,7 +5,7 @@ company: University of Kentucky
 posted_by: sjohnson519
 contact: Scott Johnson
 link: http://comm.uky.edu/job-openings/steps-technical-staff-support-assistant-apply-may-1/
-short_description: Technical Support Staff Assistant for UK COM-RIT
+description: Technical Support Staff Assistant for UK COM-RIT
 ---
 
 The UK Dept. of Communication’s Office of Research & Instructional Technology (COM-RIT) seeks applicants for immediate hire.

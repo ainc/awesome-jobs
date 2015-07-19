@@ -1,72 +1,20 @@
 ---
 layout: page
-permalink: /employers/
+title: Employers
 ---
 
 {% include sidebar.html %}
-<div class='col-md-8'>
-	<div class='content'>
-		<h1 class='text-center'>Employers</h1>
+<div class="col-md-8">
+	<div class="content">
+	<h1 class="text-center">Employers</h1>
 		<br>
-		<div class='text-center'>
+		<div class="text-center">
 
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/bengreen.html">Ben Green (Leancor)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/benjacoby.html">Ben Jacoby</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/danadams.html">Dan Adams (Earthineer)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/garydarna.html">Gary Darna (CompleteSet)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/jamiepridemore.html">Jamie Pridemore</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/kkurzendoerfer.html">Keith Kurzendoerfer (Apax Software)</a>
-			<br>
-			<br>
-			<img alt="Smaller nick such 5" class="img-circle smaller" src="https://jobsboard.s3.amazonaws.com/uploads/avatars/user/avatar/15/smaller_nick_such-5.jpg?AWSAccessKeyId=AKIAIFPCVKOMI5FCZJ4A&Signature=KwhuCkWtvkeXa5MzlkG4D9805z4%3D&Expires=1432399250" />
-			<a href="user/nicksuch.html">Nick Such (Awesome Inc)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/srazor.html">Sam Razor (Hippo Manager Software, Inc.)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/sjohnson519.html">Scott Johnson (University of Kentucky)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/sjohnson518.html">Scott Johnson (Univ. of Kentucky Dept. of Communication)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/shanehoward.html">Shane Howard</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/sminier.html">Stephanie Minier (Net Tango)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/testemail2015.html">Testing Email (Testing Email)</a>
-			<br>
-			<br>
-			<img alt="Default avatar" class="img-circle smaller" src="/default_avatar.jpg" />
-			<a href="user/hagan.html">Weston Hagan (Durham Labs)</a>
-			<br>
-			<br>
-			<br>
+		{% for employer in site.employers %}
+          <h2><a href="{{ employer.url }}">{{ employer.title }}</a></h2>
+          {{ employer.description }}
+          <hr>
+        {% endfor %}
 
 		</div>
 	</div>
