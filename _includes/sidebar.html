@@ -9,16 +9,24 @@
 	</div>
 	<div class="content text-center">
 		<h2 class="text-center">Search</h2>
+
 		<br>
-		<form accept-charset="UTF-8" action="/job_search" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-			<input autofocus="autofocus" class="form-control input-lg" id="q" name="q" placeholder="iOS Developer" type="text" value="" />
-			<br>
-			<div class="text-center">
-				<button class="btn btn-lg btn-primary" type="submit">
-					<span class="glyphicon glyphicon-search"></span>
-				</button>
-			</div>
-		</form>
+		<!-- Html Elements for Search -->
+		<div id="search-container">
+		<input type="text" id="search-input" placeholder="search...">
+		<ul id="results-container"></ul>
+		</div>
+
+		<!-- Script pointing to jekyll-search.js -->
+		<script src="{{ site.baseurl }}/bower_components/simple-jekyll-search/dest/jekyll-search.js" type="text/javascript"></script>
+		<script type="text/javascript">
+      	SimpleJekyllSearch({
+  			searchInput: document.getElementById('search-input'),
+  			resultsContainer: document.getElementById('results-container'),
+  			json: '/search.json',
+		})
+    	</script>
+		
 
 	</div>
 </div>

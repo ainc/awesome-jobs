@@ -1,0 +1,13 @@
+---
+---
+[
+  {% for job in site.jobs %}
+    {
+      "title"    : "{{ job.title | escape }}",
+      "category" : "{{ job.category }}",
+      "tags"     : "{{ job.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ job.url }}",
+      "date"     : "{{ job.date }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
